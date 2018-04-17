@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#dddddd"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary">
+
+                <ImageButton
+                    android:id="@+id/button_back"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="?android:attr/actionModeCloseDrawable"/>
+
+                <TextView
+                    android:id="@+id/textView_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="56dp"
+                    android:text="글 쓰기"
+                    android:layout_toRightOf="@id/button_back"
+                    android:gravity = "center_vertical"
+                    android:textSize="20dp"
+                    android:layout_alignBottom="@id/button_back"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editText_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/layout_top"
+                android:layout_marginTop="26dp"
+                android:ems="13"
+                android:inputType="textPersonName"
+                android:background="@android:color/white"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:hint="제목을 입력해주세요."/>
+
+
+            <EditText
+                android:id="@+id/editText_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft = "@id/editText_title"
+                android:layout_alignRight = "@id/editText_title"
+                android:layout_below="@+id/editText_title"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:lines="7"
+                android:maxLines="7"
+                android:gravity="left|top"
+                android:background="@android:color/white"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:hint="내용을 입력해주세요."/>
+
+            <ImageView
+                android:id="@+id/imageView_content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_alignLeft="@+id/editText_content"
+                android:layout_alignRight="@+id/editText_content"
+                android:layout_below="@id/editText_content"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"/>
+
+            <Button
+                android:id="@+id/button_add_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미지 추가"
+                android:layout_alignLeft="@+id/editText_content"
+                android:layout_below="@id/imageView_content"/>
+
+
+
+            <Button
+                android:id="@+id/button_modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/editText_content"
+                android:layout_alignLeft="@+id/editText_content"
+                android:layout_below="@id/button_add_image"
+                android:layout_alignStart="@+id/editText_content"
+                android:layout_marginBottom="10dp"
+                android:text="수정"
+                android:textSize="20dp"
+                android:layout_alignRight="@+id/editText_content" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

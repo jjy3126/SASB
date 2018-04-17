@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="#98DFFF">
+        <!--android:background="@drawable/board_list_border"-->
+
+    <ImageView
+        android:id="@+id/imageView_content"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:layout_toRightOf="@id/imageView_content"
+        android:layout_marginLeft="15dp"
+        android:layout_alignTop="@id/imageView_content"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@id/textView_title"
+        android:layout_toRightOf="@id/imageView_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="right"
+        android:layout_alignLeft="@id/textView_title"/>
+
+    <TextView
+        android:id="@+id/textView_writetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@id/textView_name"
+        android:layout_toRightOf="@id/imageView_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="right"
+        android:layout_alignLeft="@id/textView_title"/>
+</RelativeLayout>

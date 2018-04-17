@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+
+<LinearLayout
+    android:id="@+id/layout_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:background="@android:color/white"
+    android:visibility="invisible">
+
+    <ImageButton
+        android:id="@+id/button_search_cancel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="?android:attr/actionModeCloseDrawable"/>
+
+    <EditText
+        android:id="@+id/editText_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:background="@android:color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:hint="통합검색"/>
+
+    <ImageView
+        android:id="@+id/button_search_ok"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_search"/>
+
+</LinearLayout>
+
+
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipe_layout"
+    android:layout_below="@+id/layout_top"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="20dp">
+
+    <ListView
+        android:id="@+id/listView_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="20dp"
+        android:divider="@android:color/transparent">
+
+    </ListView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
+<ListView
+    android:id="@+id/listView_board_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/layout_top"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="20dp"
+    android:dividerHeight="20dp"
+    android:divider="@android:color/transparent"
+    android:visibility="gone">
+
+</ListView>
+
+
+<android.support.design.widget.FloatingActionButton
+    android:id="@+id/btn_insert"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@android:drawable/ic_menu_add"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="20dp"
+    />
+
+
+</RelativeLayout>
